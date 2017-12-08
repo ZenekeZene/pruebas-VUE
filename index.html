@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title>Probando Vue.js</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  </head>
+  <body>
+    <div id="app">
+      <span v-bind:title="message">
+      {{ message }}
+      </span>
+      <p v-if="isVisible">¿Me ves?</p>
+      <ul>
+        <li v-for="book in books">
+          {{ book.text }}
+        </li>
+      </ul>
+      <button v-on:click="reverseMessage">Reverse Message</button>
+      <input v-model="message">
+      <ol>
+        <todo-item
+          v-for="item in groceryList"
+          v-bind:todo="item"
+          v-bind:key="item.id">
+        </todo-item>
+      </ol>
+    </div>
+    <script src="test.js"></script>
+
+    <div id="app2">
+      <p>{{ a }}</p>
+      <input v-model="a">
+    </div>
+    <script src="test2.js"></script>
+
+    <div id="app3">
+      <p v-once>{{ message }}</p>
+      <p>Using mustaches: {{ rawHTML }}</p>
+      <p>Using v-html directive: <span v-html="rawHTML"></span></p>
+      <p v-bind:id="dynamicId">Dynamic ID</p>
+      <button v-bind:disabled="isButtonDisabled">Button</button>
+    </div>
+    <script src="test3.js"></script>
+  </body>
+</html>
