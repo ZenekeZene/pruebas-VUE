@@ -10,6 +10,12 @@ var vm = new Vue({
       rawHTML: '<strong>Fuerte</strong>',
       // Attributes:
       dynamicId: 'my-id',
-      isButtonDisabled: true
+      isButtonDisabled: true,
+// Directives:
+      ok: true,
+      url: 'http://google.es',
+      doSomething: function(event) {
+        console.log(event);
+      }
     }
 });

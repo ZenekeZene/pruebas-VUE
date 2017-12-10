@@ -38,6 +38,16 @@
       <p>Using v-html directive: <span v-html="rawHTML"></span></p>
       <p v-bind:id="dynamicId">Dynamic ID</p>
       <button v-bind:disabled="isButtonDisabled">Button</button>
+      <!-- Arguments -->
+      <p v-bind:class="ok ? 'YES' : 'NO'">{{ ok ? 'YES': 'NO' }}</p>
+      <a v-bind:href="url">Enlace</a>
+      <!-- Modifiers (trigger event.preventDefault())-->
+      <form v-on:submit.prevent="onSubmit"></form>
+      <!-- Shorthands -->
+      <!-- For v-bind -->
+      <a :href="url">Enlace 2</a>
+      <!-- For v-on -->
+      <button @click.prevent="doSomething">Click me</button>
     </div>
     <script src="test3.js"></script>
   </body>
