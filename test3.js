@@ -16,6 +16,6 @@ var vm = new Vue({
       url: 'http://google.es',
       doSomething: function(event) {
         console.log(event);
-      }
+      },
     }
 });

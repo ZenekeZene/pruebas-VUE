@@ -1,9 +1,13 @@
 <html>
   <head>
     <title>Probando Vue.js</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   </head>
   <body>
+
+    <h1>INTRODUCTION</h1>
     <div id="app">
       <span v-bind:title="message">
       {{ message }}
@@ -26,12 +30,22 @@
     </div>
     <script src="test.js"></script>
 
+
+
+
+
+    <h1>THE VUE INSTANCE</h1>
     <div id="app2">
       <p>{{ a }}</p>
       <input v-model="a">
     </div>
     <script src="test2.js"></script>
 
+
+
+
+
+    <h1>TEMPLATE SYNTAX</h1>
     <div id="app3">
       <p v-once>{{ message }}</p>
       <p>Using mustaches: {{ rawHTML }}</p>
@@ -50,5 +64,34 @@
       <button @click.prevent="doSomething">Click me</button>
     </div>
     <script src="test3.js"></script>
+
+
+
+
+
+    <h1>COMPUTED PROPERTIES AND WATCHERS</h1>
+    <div id="app4">
+      <!-- Computed properties -->
+      <p>Original message: "{{ message }}"</p>
+      <p>Computed reversed message: "{{ reversedMessage }}"</p>
+      <!-- Computed Caching vs Methods -->
+      <p>Computed reversed message: "{{ reverse(message) }}"</p>
+      <!-- Computed vs Watched Property -->
+      <p>{{ fullName }}</p>
+      <!-- Computed Setter -->
+      <p>{{ fullName2 }}</p>
+
+      <!-- Watchers -->
+      <p>
+        Ask a yes/no question:
+        <input v-model="question">
+      </p>
+      <p>{{ answer }}</p>
+      <script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
+
+    </div>
+    <script src="test4.js"></script>
+
   </body>
 </html>
