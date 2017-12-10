@@ -16,3 +16,15 @@ h1::before {
   margin-right: 10px;
   color: #3db377;
 }
+
+.active {
+  outline: 1px solid #3db377;
+}
+
+.text-danger {
+  color: red;
+}
+
+.static {
+  text-decoration: underline;
+}

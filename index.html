@@ -93,5 +93,34 @@
     </div>
     <script src="test4.js"></script>
 
+
+
+
+
+    <h1>CLASS AND STYLE BINDINGS</h1>
+    <div id="app5">
+
+      <!-- BINDING HTML CLASSES -->
+      <!-- Object Syntax -->
+      <p v-bind:class="{ active: isActive }">Hola</p>
+      <p class="static" v-bind:class="{ active: isActive, 'text-danger': hasError }">Hola</p>
+      <p class="static" v-bind:class="classObject">Hola</p>
+      <p class="static" v-bind:class="classObjectComputed">Hola</p>
+      <!-- Array Sintax -->
+      <p v-bind:class="[activeClass, errorClass]">Adios</p>
+      <p v-bind:class="[isActive ? activeClass : '', errorClass]">Adios</p>
+      <p v-bind:class="[{ active: isActive }, errorClass]">Adios</p>
+      <!-- With Components -->
+      <my-component class="baz boo"></my-component>
+      <my-component v-bind:class="{ active: isActive }"></my-component>
+
+      <!-- BINDING INLINE STYLES -->
+      <!-- Object Syntax -->
+      <p v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }">Pruebita</p>
+      <p v-bind:style="styleObject">Pruebita 2</p>
+      <!-- Array Syntax -->
+      <p v-bind:style="[baseStyles, overridingStyles]">Probando</p>
+    </div>
+    <script src="test5.js"></script>
   </body>
 </html>
