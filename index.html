@@ -6,9 +6,16 @@
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   </head>
   <body>
+    <div class="fixed-block fixed-block--top l-flex vue-look">
+      <h1>PRUEBAS VUE</h1>
+    </div>
 
-    <h1>INTRODUCTION</h1>
-    <div id="app">
+
+
+
+
+    <h2>INTRODUCTION</h2>
+    <section id="app">
       <span v-bind:title="message">
       {{ message }}
       </span>
@@ -27,26 +34,26 @@
           v-bind:key="item.id">
         </todo-item>
       </ol>
-    </div>
+    </section>
     <script src="test.js"></script>
 
 
 
 
 
-    <h1>THE VUE INSTANCE</h1>
-    <div id="app2">
+    <h2>THE VUE INSTANCE</h2>
+    <section id="app2">
       <p>{{ a }}</p>
       <input v-model="a">
-    </div>
+    </section>
     <script src="test2.js"></script>
 
 
 
 
 
-    <h1>TEMPLATE SYNTAX</h1>
-    <div id="app3">
+    <h2>TEMPLATE SYNTAX</h2>
+    <section id="app3">
       <p v-once>{{ message }}</p>
       <p>Using mustaches: {{ rawHTML }}</p>
       <p>Using v-html directive: <span v-html="rawHTML"></span></p>
@@ -62,15 +69,15 @@
       <a :href="url">Enlace 2</a>
       <!-- For v-on -->
       <button @click.prevent="doSomething">Click me</button>
-    </div>
+    </section>
     <script src="test3.js"></script>
 
 
 
 
 
-    <h1>COMPUTED PROPERTIES AND WATCHERS</h1>
-    <div id="app4">
+    <h2>COMPUTED PROPERTIES AND WATCHERS</h2>
+    <section id="app4">
       <!-- Computed properties -->
       <p>Original message: "{{ message }}"</p>
       <p>Computed reversed message: "{{ reversedMessage }}"</p>
@@ -90,15 +97,15 @@
       <script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
 
-    </div>
+    </section>
     <script src="test4.js"></script>
 
 
 
 
 
-    <h1>CLASS AND STYLE BINDINGS</h1>
-    <div id="app5">
+    <h2>CLASS AND STYLE BINDINGS</h2>
+    <section id="app5">
 
       <!-- BINDING HTML CLASSES -->
       <!-- Object Syntax -->
@@ -106,7 +113,7 @@
       <p class="static" v-bind:class="{ active: isActive, 'text-danger': hasError }">Hola</p>
       <p class="static" v-bind:class="classObject">Hola</p>
       <p class="static" v-bind:class="classObjectComputed">Hola</p>
-      <!-- Array Sintax -->
+      <!-- Array Syntax -->
       <p v-bind:class="[activeClass, errorClass]">Adios</p>
       <p v-bind:class="[isActive ? activeClass : '', errorClass]">Adios</p>
       <p v-bind:class="[{ active: isActive }, errorClass]">Adios</p>
@@ -120,7 +127,16 @@
       <p v-bind:style="styleObject">Pruebita 2</p>
       <!-- Array Syntax -->
       <p v-bind:style="[baseStyles, overridingStyles]">Probando</p>
-    </div>
+    </section>
     <script src="test5.js"></script>
+
+
+
+
+    <div class="fixed-block fixed-block--bottom l-flex">
+      <p><strong>Note:</strong>&nbsp;To launch a local web server:</p>
+      <code>ws --spa index.html</code>
+      <a href="https://www.npmjs.com/package/local-web-server">Link</a>
+    </div>
   </body>
 </html>
