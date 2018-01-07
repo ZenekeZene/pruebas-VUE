@@ -135,9 +135,11 @@
 
     <h2>Conditional Rendering</h2>
     <section id="app6">
+
       <!-- v-if -->
-      <p v-if="ok">Yes</p>
+      <p v-if="ok=='ok'">Yes</p>
       <p v-else>No</p>
+
       <!-- Conditiona groups with v-if on <template>-->
       <template v-if="ok=='ok'">
         <h3>Title</h3>
@@ -145,26 +147,17 @@
         <p>Paragraph 2</p>
         <p>Paragraph 3</p>
       </template>
+
       <!-- v-else -->
-      <div v-if="Math.random() > 0.5">
-        Now you see me
-      </div>
-      <div v-else>
-        Now you don't<table>
-      </div>
+      <div v-if="Math.random() > 0.5">Now you see me</div>
+      <div v-else>Now you don't</div>
+
       <!-- v-else-if -->
-      <div v-if="type === 'A'">
-        A
-      </div>
-      <div v-else-if="type === 'B'">
-        B
-      </div>
-      <div v-else-if="type === 'C'">
-        C
-      </div>
-      <div v-else>
-        Not A/B/C
-      </div>
+      <div v-if="type === 'A'">A</div>
+      <div v-else-if="type === 'B'">B</div>
+      <div v-else-if="type === 'C'">C</div>
+      <div v-else>Not A/B/C</div>
+
     </section>
     <script src="test6.js"></script>
 
